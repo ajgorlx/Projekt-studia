@@ -1,5 +1,8 @@
 import {Routes, Route} from "react-router-dom"
-import 'bootstrap/dist/css/booststrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import Homepage from "./pages/Home";
+
 import './App.css';
 
 function App() {
@@ -7,7 +10,7 @@ function App() {
     <div className="App">
       <h1>Meme Generator</h1>
       <Routes>
-
+        <Route path="/" element={<Homepage />} />
       </Routes>
     </div>
   );
