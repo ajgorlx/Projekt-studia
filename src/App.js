@@ -2,7 +2,7 @@ import {Routes, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Homepage from "./pages/Home";
-import EditPage from "./pages/edit";
+import EditPage from "./pages/Edit";
 
 import './App.css';
 

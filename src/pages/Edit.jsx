@@ -1,4 +1,4 @@
-import React, {useState, createRef} from 'react';
+import React, {useState, useRef} from 'react';
 import Text from "../components/Text";
 import { Button } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
@@ -8,7 +8,7 @@ const EditPage = () => {
     const [params] = useSearchParams();
     const [count, setCount] = useState(0);
 
-    const memeRef = createRef();
+    const memeRef = useRef();
 
     const addText = () => {
         setCount(count + 1)
@@ -27,7 +27,7 @@ const EditPage = () => {
                     ))}  
           </div>
           <Button onClick={addText}>Add Text</Button>
-          <Button variant="succes" onClick={e => exportComponentAsJPEG(memeRef)}>Save</Button>
+          <Button variant="warning" onClick={e => exportComponentAsJPEG(memeRef)}>Save</Button>
         </div>
     );
 };
